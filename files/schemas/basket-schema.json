@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "https://github.com/NDE-Europe/tluna-js-exercise/blob/master/files/schemas/basket-schema.json",
+  "title": "Basket",
+  "description": "A shopping basket with an array of products",
+  "type": "array",
+  "items": {
+    "title": "Product",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  }
+}

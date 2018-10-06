@@ -1,0 +1,17 @@
+{
+  "name": "randombasketapi",
+  "version": "1.0.0",
+  "description": "Generates a random shopping basket full of products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tiago Luna",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "consign": "^0.1.6",
+    "cors": "^2.8.4",
+    "express": "^4.16.3"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "https://github.com/NDE-Europe/tluna-js-exercise/blob/master/files/schemas/receipt-schema.json",
+  "title": "Receipt",
+  "description": "A payment receipt that has a set of items with calculated values",
+  "type": "object",
+  "properties": {
+    "items": {
+      "type": "array",
+      "items": {
+        "title": "Receipt Item",
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "offer": {
+            "title": "Sale Offer",
+            "type": "object",
+            "properties": {
+              "take": {
+                "type": "integer",
+                "minimum": 2
+              },
+              "payFor": {
+                "type": "integer",
+                "minimum": 1
+              }
+            }
+          },
+          "quantity": {
+            "type": "integer",
+            "minimum": 1
+          },
+          "price": {
+            "type": "number",
+            "exclusiveMinimum": 0
+          }
+        },
+        "required": [
+          "name",
+          "quantity",
+          "price"
+        ]
+      }
+    }
+  },
+  "total": {
+    "type": "number",
+    "exclusiveMinimum": 0
+  }
+}

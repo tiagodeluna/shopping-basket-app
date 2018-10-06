@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "id": "https://github.com/NDE-Europe/tluna-js-exercise/blob/master/files/schemas/price-table-schema.json",
+  "title": "Price Table",
+  "description": "A price table with all available products",
+  "type": "array",
+  "items": {
+    "title": "Price Item",
+    "type": "object",
+    "properties": {
+      "productName": {
+        "type": "string"
+      },
+      "unitPrice": {
+        "type": "number",
+        "exclusiveMinimum": 0
+      },
+      "saleOffer": {
+        "title": "Sale Offer",
+        "type": "object",
+        "properties": {
+          "take": {
+            "type": "integer",
+            "minimum": 2
+          },
+          "payFor": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    },
+    "required": [
+      "productName", "unitPrice"
+    ]
+  }
+}
